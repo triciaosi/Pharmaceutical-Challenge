@@ -45,7 +45,9 @@ The executive team has tasked you with generating all of the tables and figures 
   * The second pie chart was created using Matplotlib's pyplot methods.
 
 # Calculate Quartiles, Find Outliers, and Create a Box Plot
-* I calculated the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. * Then, I calculated the quartiles and IQR, and determined if there were any potential outliers across all four treatment regimens. 
+* I calculated the final tumor volume of each mouse across four of the most promising treatment regimens: 
+  * Capomulin, Ramicane, Infubinol, and Ceftamin.
+* Then, I calculated the quartiles and IQR, and determined if there were any potential outliers across all four treatment regimens. 
 
 
 # Create a Line Plot and a Scatter Plot
