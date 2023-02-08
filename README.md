@@ -7,70 +7,53 @@ As a senior data analyst at the company, I've been given access to the complete 
 
 The executive team has tasked you with generating all of the tables and figures needed for the technical report of the clinical study. They have also asked you for a top-level summary of the study results.
 
-# Instructions
-## This assignment is broken down into the following tasks:
+# Steps I took to analyze my data:
 
-Prepare the data.
+* Prepare the data.
 
-Generate summary statistics.
+* Generate summary statistics.
 
-Create bar charts and pie charts.
+* Create bar charts and pie charts.
 
-Calculate quartiles, find outliers, and create a box plot.
+* Calculate quartiles, find outliers, and create a box plot.
 
-Create a line plot and a scatter plot.
+* Create a line plot and a scatter plot.
 
-Calculate correlation and regression.
+* Calculate correlation and regression.
 
-Prepare the Data
-Run the provided package dependency and data imports, and then merge the mouse_metadata and study_results DataFrames into a single DataFrame.
+## Prepare the Data
+1. I ran the provided package dependency and data imports, and then merged the mouse_metadata and study_results DataFrames into a single DataFrame.
+2. I displayed the number of unique mice IDs in the data, and then checked for any mouse ID with duplicate time points. 
+3. Next I Displayed the data associated with that mouse ID, and then created a new DataFrame where this data is removed. 
+4. I then this cleaned DataFrame for the remaining steps.
+5. Lastly, I displayed the updated number of unique mice IDs.
 
-Display the number of unique mice IDs in the data, and then check for any mouse ID with duplicate time points. Display the data associated with that mouse ID, and then create a new DataFrame where this data is removed. Use this cleaned DataFrame for the remaining steps.
+## Generate Summary Statistics
+* I created a DataFrame of summary statistics. 
 
-Display the updated number of unique mice IDs.
+* My summary statistics includes: 
+  * A row for each drug regimen. These regimen names should be contained in the index column.
+  * A column for each of the following statistics: mean, median, variance, standard deviation, and SEM of the tumor volume.
 
-Generate Summary Statistics
-Create a DataFrame of summary statistics. Remember, there is more than one method to produce the results you're after, so the method you use is less important than the result.
+## Create Bar Charts and Pie Charts
+* I generated two bar charts: 
+  * The first bar chart was created with the Pandas DataFrame.plot() method.
+  * The second bar chart was created using Matplotlib's pyplot method.
 
-Your summary statistics should include:
+* I generate two pie charts, that each show the distribution of female versus male mice in the study.
+  * The first pie chart was created with the Pandas DataFrame.plot() method.
+  * The second pie chart was created using Matplotlib's pyplot methods.
 
-A row for each drug regimen. These regimen names should be contained in the index column.
+# Calculate Quartiles, Find Outliers, and Create a Box Plot
+* I calculated the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. * Then, I calculated the quartiles and IQR, and determined if there were any potential outliers across all four treatment regimens. 
 
-A column for each of the following statistics: mean, median, variance, standard deviation, and SEM of the tumor volume.
 
-Create Bar Charts and Pie Charts
-Generate two bar charts. Both charts should be identical and show the total number of time points for all mice tested for each drug regimen throughout the study.
+# Create a Line Plot and a Scatter Plot
+* I selected a mouse that was treated with Capomulin, and generated a line plot of tumor volume versus time point for that mouse.
+* Next, I generated a scatter plot of tumor volume versus mouse weight for the Capomulin treatment regimen.
 
-Create the first bar chart with the Pandas DataFrame.plot() method.
+# Calculate Correlation and Regression
 
-Create the second bar chart with Matplotlib's pyplot methods.
-
-Generate two pie charts. Both charts should be identical and show the distribution of female versus male mice in the study.
-
-Create the first pie chart with the Pandas DataFrame.plot() method.
-
-Create the second pie chart with Matplotlib's pyplot methods.
-
-Calculate Quartiles, Find Outliers, and Create a Box Plot
-Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Then, calculate the quartiles and IQR, and determine if there are any potential outliers across all four treatment regimens. Use the following substeps:
-
-Create a grouped DataFrame that shows the last (greatest) time point for each mouse. Merge this grouped DataFrame with the original cleaned DataFrame.
-
-Create a list that holds the treatment names as well as a second, empty list to hold the tumor volume data.
-
-Loop through each drug in the treatment list, locating the rows in the merged DataFrame that correspond to each treatment. Append the resulting final tumor volumes for each drug to the empty list.
-
-Determine outliers by using the upper and lower bounds, and then print the results.
-
-Using Matplotlib, generate a box plot that shows the distribution of the final tumor volume for all the mice in each treatment group. Highlight any potential outliers in the plot by changing their color and style.
-
-Create a Line Plot and a Scatter Plot
-Select a mouse that was treated with Capomulin, and generate a line plot of tumor volume versus time point for that mouse.
-
-Generate a scatter plot of tumor volume versus mouse weight for the Capomulin treatment regimen.
-
-Calculate Correlation and Regression
-Calculate the correlation coefficient and linear regression model between mouse weight and average tumor volume for the Capomulin treatment.
-
-Plot the linear regression model on top of the previous scatter plot.
+* I calculated the correlation coefficient and linear regression model between mouse weight and average tumor volume for the Capomulin treatment.
+* Lastly, I plotted the linear regression model on top of the previous scatter plot.
 
