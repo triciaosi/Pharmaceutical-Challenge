@@ -7,8 +7,8 @@ As a senior data analyst at the company, I've been given access to the complete 
 
 The executive team has tasked you with generating all of the tables and figures needed for the technical report of the clinical study. They have also asked you for a top-level summary of the study results.
 
-Instructions
-This assignment is broken down into the following tasks:
+# Instructions
+## This assignment is broken down into the following tasks:
 
 Prepare the data.
 
